@@ -1,0 +1,15 @@
+{
+  "name": "tourers",
+  "version": "1.0.0",
+  "description": "A website for tourist to hike and also have fun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ixrael",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}
