@@ -17,10 +17,9 @@ const tours = JSON.parse(
 
 app.get('/api/v1/tours', (req, res) => {
   res.status(200).json({
-    status: 'Success',
-    data: {
-      tours: tours,
-    },
+    status: 'success',
+    result: tours.length,
+    tours: tours,
   });
 });
 
