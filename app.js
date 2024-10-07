@@ -16,6 +16,16 @@ app.get('/api/v1/tours', (req, res) => {
   });
 });
 
+app.get('/api/v1/tours/:id', (req, res) => {
+  //Converting string to array
+  const id = req.params.id * 1;
+  const tour = tours.find((el) => el.id === id);
+  res.status(200).json({
+    status: 'success',
+    tour: tour,
+  });
+});
+
 app.post('/api/v1/tours', (req, res) => {
   console.log(req.body);
 
