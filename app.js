@@ -19,7 +19,9 @@ app.get('/api/v1/tours', (req, res) => {
 app.get('/api/v1/tours/:id', (req, res) => {
   //Converting string to array
   const id = req.params.id * 1;
+  const tour = tours.find((el) => el.id === id);
 
+  //Catching failed response
   if (id > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -27,8 +29,7 @@ app.get('/api/v1/tours/:id', (req, res) => {
     });
   }
 
-  const tour = tours.find((el) => el.id === id);
-
+  //catching success response
   res.status(200).json({
     status: 'success',
     tour: tour,
